@@ -400,7 +400,7 @@ class NAO_python(OpenRTM_aist.DataFlowComponentBase):
 			if self._enable_camera[0] > 0:
 				self._videoDevice.connect(self._ipaddress[0], self._port[0])
 				resolution = vision_definitions.kQVGA
-				colorSpace = vision_definitions.kRGBColorSpace
+				colorSpace = vision_definitions.kBGRColorSpace
 				fps = 30
 				self._video_nameId = self._videoDevice.proxy.subscribe("python_GVM", resolution, colorSpace, fps)
 				pass
